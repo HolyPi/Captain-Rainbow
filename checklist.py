@@ -1,31 +1,7 @@
 
 
 checklist = []
-# checklist.append('Blue')
-# print(checklist)
-# checklist.append('Orange')
-# print(checklist)
-# CREATE
-# def create(item):
-#     checklist.append(item)
-# # READ
-# def read(index):
-#     return checklist[index]
-#     checklist = ['Blue', 'Orange']
-# checklist[1] = 'Cats'
-# print(checklist)
-#
-# # UPDATE
-# def update(index, item):
-#     checklist[index] = item
-#
-#     checklist = ['Blue', 'Cats']
-# checklist.pop(1)
-# print(checklist)
-#
-# # DESTROY
-# def destroy(index):
-#     checklist.pop(index)
+
 
 def user_input(prompt):
     # the input function will display a message in the terminal
@@ -76,17 +52,17 @@ def select(function_code):
     elif function_code == "P":
         list_all_items()
 
+    elif function_code == "Q":
+        return False
+
     # Catch all
     else:
         print("Unknown Option")
 
+    return True
+
 def test():
-      # Your testing code here
-    # ...
-    # Call your new function with the appropriate value
-    # View results
-    list_all_items()
-    # Continue until all code is run
+     
     create("purple sox")
     create("red cloak")
 
@@ -100,10 +76,11 @@ def test():
     # print(read(1))
 
     list_all_items()
-user_value = user_input("Please Enter a value:")
-print(user_value)
 
-test()
+    user_value = user_input("Please Enter a value:")
+    print(user_value)
+
+# test()
 
 running = True
 while running:
